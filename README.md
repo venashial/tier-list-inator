@@ -21,7 +21,7 @@ Using SvelteKit, tier-list-inator lets you create minmal yet effective tier list
 
 ## Demo
 
-View the demo at [tier-list-inator.vercel.app](https://tier-list-inator.vercel.app)
+View the demo at [tier-list-inator.vercel.app](https://tier-list-inator.vercel.app/edit)
 
 
 ## Roadmap
