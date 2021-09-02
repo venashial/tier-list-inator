@@ -8,5 +8,13 @@
 }
 
 .btn {
-	@apply py-2 px-4 rounded bg-gray-700 focus:outline-none border-2 border-transparent focus:border-gray-400 hover:bg-gray-600;
+	@apply py-2 px-4 bg-gray-700 focus:outline-none border-2 border-transparent focus:border-gray-400 hover:bg-gray-600;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.hide-scrollbar::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
 }

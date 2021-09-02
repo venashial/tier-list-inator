@@ -1,8 +1,9 @@
 <script>
-	import { flip } from 'svelte/animate';
 	import { dndzone } from 'svelte-dnd-action';
+  import { flip } from 'svelte/animate';
 
 	import { state } from './_state';
+  import Item from '$lib/Item.svelte'
 
 	function handle(e, letter) {
 		$state.list[letter] = e.detail.items;
@@ -23,15 +24,15 @@
 		},
 		{
 			letter: 'c',
-			color: 'bg-green-400'
+			color: 'bg-green-500'
 		},
 		{
 			letter: 'd',
-			color: 'bg-blue-400'
+			color: 'bg-blue-500'
 		},
 		{
 			letter: 'e',
-			color: 'bg-purple-400'
+			color: 'bg-purple-500'
 		},
 		{
 			letter: 'f',
@@ -40,28 +41,24 @@
 	];
 </script>
 
-<div class="grid gap-1 bg-black" style="grid-template-columns: auto 1fr">
+<div class="grid gap-1 bg-black" style="grid-template-columns: auto 1fr" id="capture-area">
 	{#each rows as row, index (index)}
 		<div
-			class="flex items-center justify-center {row.color} text-2xl text-black"
+			class="flex items-center justify-center {row.color} text-3xl text-black"
 			style="width: calc(100vh / 7 - 0.25rem); height: calc(100vh / 7 - 0.25rem); grid-column: 1"
 		>
 			{row.letter.toUpperCase()}
 		</div>
 		<div
-			class="bg-gray-700 flex gap-1"
+			class="bg-gray-700 flex gap-1 overflow-x-auto hide-scrollbar"
 			style="grid-column: 2"
 			use:dndzone={{ items: $state.list[row.letter], flipDurationMs: 300, dropTargetStyle: {} }}
 			on:consider={(e) => handle(e, row.letter)}
 			on:finalize={(e) => handle(e, row.letter)}
 		>
 			{#each $state.list[row.letter] as item (item.id)}
-				<div animate:flip={{ duration: 300 }} class="h-full" style="aspect-ratio: 1/1">
-					<img
-						src={item.url}
-						alt="Item in tier list row"
-						style="height: calc(100vh / 7 - 0.25rem);"
-					/>
+				<div animate:flip={{ duration: 300 }}>
+          <Item url={item.url} />
 				</div>
 			{/each}
 		</div>
