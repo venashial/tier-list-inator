@@ -37,7 +37,7 @@ function randomId() {
 
 <input class="btn rounded {term ? 'rounded-b-none' : ''}" type="search" placeholder="Search for items" aria-label="Search" bind:value={term} on:input={debounce(search, 300)} />
 {#if term}
-<div class="bg-gray-700 rounded-b p-2 flex flex-wrap gap-2 overflow-auto border-t-3 border-gray-500" style="margin-top: -0.5rem;" use:dndzone={{ items: results, flipDurationMs: 300, dropTargetStyle: {} }}
+<div class="bg-gray-700 rounded-b p-2 flex flex-wrap overflow-auto border-t-2 border-gray-400" style="margin-top: -0.5rem;" use:dndzone={{ items: results, flipDurationMs: 300, dropTargetStyle: {} }}
     on:consider={handle}
     on:finalize={handle}>
     {#if loading}
@@ -45,7 +45,7 @@ function randomId() {
     {:else}
     {#each results as item (item.id)}
     <div animate:flip={{ duration: 300 }}>
-    <Item url={item.url} />
+    <Item url={item.url} margin="0.2rem" />
     </div>
     {/each}
     {/if}

@@ -2,7 +2,7 @@
 	import { dndzone } from 'svelte-dnd-action';
   import { flip } from 'svelte/animate';
 
-	import { state } from './_state';
+	import { state, isRendering } from './_store';
   import Item from '$lib/Item.svelte'
 
 	function handle(e, letter) {
@@ -44,10 +44,10 @@
 <div class="grid gap-1 bg-black" style="grid-template-columns: auto 1fr" id="capture-area">
 	{#each rows as row, index (index)}
 		<div
-			class="flex items-center justify-center {row.color} text-3xl text-black"
+			class="flex items-center justify-center {row.color} text-4xl text-black"
 			style="width: calc(100vh / 7 - 0.25rem); height: calc(100vh / 7 - 0.25rem); grid-column: 1"
 		>
-			{row.letter.toUpperCase()}
+			<p style={$isRendering ? "margin-top: -1.3rem" : ''}>{row.letter.toUpperCase()}</p>
 		</div>
 		<div
 			class="bg-gray-700 flex gap-1 overflow-x-auto hide-scrollbar"
@@ -58,7 +58,7 @@
 		>
 			{#each $state.list[row.letter] as item (item.id)}
 				<div animate:flip={{ duration: 300 }}>
-          <Item url={item.url} />
+          <Item url={item.url} in_list={true} />
 				</div>
 			{/each}
 		</div>

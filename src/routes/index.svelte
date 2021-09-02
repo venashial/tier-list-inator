@@ -6,5 +6,5 @@
 </script>
 
 <svelte:head>
-	<title>My tierlists</title>
+	<title>My tier lists</title>
 </svelte:head>

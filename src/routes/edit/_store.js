@@ -12,3 +12,5 @@ export const state = writable({
   },
   pool: [],
 })
+
+export const isRendering = writable(false)
