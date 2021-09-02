@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@sveltejs/adapter-vercel': ^1.0.0-next.0
+  '@sveltejs/adapter-vercel': next
   '@sveltejs/kit': next
   '@tailwindcss/aspect-ratio': ^0.2.1
   autoprefixer: ^10.3.1
@@ -24,7 +24,7 @@ specifiers:
   tailwindcss-children: ^2.1.0
 
 devDependencies:
-  '@sveltejs/adapter-vercel': 1.0.0-next.0
+  '@sveltejs/adapter-vercel': 1.0.0-next.27
   '@sveltejs/kit': 1.0.0-next.162_svelte@3.42.4
   '@tailwindcss/aspect-ratio': 0.2.1_tailwindcss@2.2.9
   autoprefixer: 10.3.3_postcss@8.3.6
@@ -129,8 +129,10 @@ packages:
       picomatch: 2.3.0
     dev: true
 
-  /@sveltejs/adapter-vercel/1.0.0-next.0:
-    resolution: {integrity: sha512-dQf40/2vrgRfuQ++tIAlvEgjdGUkXJTSjO5syqJd5oH2HDbP3Shi+2AxWpKAqRFGyRbXDe9ej0MK1G2soZP4fQ==}
+  /@sveltejs/adapter-vercel/1.0.0-next.27:
+    resolution: {integrity: sha512-KiGDJXgjkj3MJvmQLXpE7pfQnN7dVx8pPgqcrFp8yziFrLMrvluklKmNqNei6JivQn5JVYxLojRgHpik1fdIOw==}
+    dependencies:
+      esbuild: 0.12.24
     dev: true
 
   /@sveltejs/kit/1.0.0-next.162_svelte@3.42.4:
