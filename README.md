@@ -1,38 +1,63 @@
-# create-svelte
+# Tier list -inator
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+Using SvelteKit, tier-list-inator lets you create minmal yet effective tier lists, in full-screen, with a built-in image search, and no ads. Tier lists can be shared by just copy and pasting a link.
 
-## Creating a project
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Screenshots
+
+![Tier list screenshot](https://user-images.githubusercontent.com/44736536/131795934-2ede2ab9-3647-4b07-be77-b2ebba53cbae.png)
+
+
+  
+## Features
+
+- No ads
+- URL sharing
+- Built-in Google images search
+- Smooth animations
+- Uses screen's entire height
+- Download tier list as PNG
+
+
+## Demo
+
+View the demo at [tier-list-inator.vercel.app](https://tier-list-inator.vercel.app)
+
+
+## Roadmap
+
+- [ ] Save tier lists locally
+
+- [ ] Main menu page with local tier lists
+
+  
+## Run Locally
+
+Clone the project
 
 ```bash
-# create a new project in the current directory
-npm init svelte@next
-
-# create a new project in my-app
-npm init svelte@next my-app
+  git clone https://github.com/venashial/tier-list-inator
 ```
 
-> Note: the `@next` is temporary
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Go to the project directory
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+  cd tier-list-inator
 ```
 
-## Building
-
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
+Install dependencies
 
 ```bash
-npm run build
+  pnpm install
 ```
 
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+Start the server
+
+```bash
+  pnpm dev
+```
+
+  
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
